@@ -3,7 +3,8 @@ version: 2.1
 jobs:
   build:
     machine:
-      image: ubuntu-2004:202010-01
+      image: romeujr/ubuntu-2004-git-dotnet-nodejs-awscli
+
     steps:
       - checkout
       - run:
@@ -19,7 +20,8 @@ jobs:
             - .
   test:
     machine:
-      image: ubuntu-2004:202010-01
+      image: romeujr/ubuntu-2004-git-dotnet-nodejs-awscli
+
     steps:
       - attach_workspace:
           at: .
@@ -31,7 +33,8 @@ jobs:
             - .
   deploy:
     machine:
-        image: ubuntu-2004:202010-01
+        image: romeujr/ubuntu-2004-git-dotnet-nodejs-awscli
+
     steps:
       - attach_workspace:
           at: .
